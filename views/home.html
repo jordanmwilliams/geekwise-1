@@ -5,4 +5,35 @@
     <p>
         <a class="btn btn-lg btn-primary" href="#products" role="button">View Products</a>
     </p>
+
 </div>
+<div class="featured">
+<div class="full" >
+	
+        <div class="banner">
+          <h1>Featured</h1>
+        </div>
+        <div class="product_desc">
+          <h2 ng-bind="featuredProducts[0].title">Product1</h2>
+          <div class="description" ng-bind="featuredProducts[0].description">
+          <p>Um, well it's a delorean, right? Yeah okay. Wow, ah Red, you look great. Everything looks great. 1:24, I still got time. Oh my god. No, no not again...</p>
+          </div>
+          <div class="call_to_action">
+            <a class="button" ui-sref="product({id: featureProducts[0].guid})">Read More</a>
+          </div>
+      </div>
+      </div>
+      <div class="small">
+      <div class="three" ng-repeat="product in featuredProducts | limitTo:4" ng-if="!$first">
+          <div class="featured_small" >
+            <div class="prod_img">
+            <img src="http://i.imgur.com/qyk1gD3.jpg"/>
+            </div>
+            <div class="small_desc"><h3 ng-bind="product.title">Flower Dress</h3><p ng-bind="product.description">Why that's me, look at me, I'm an old man. Oh, you make it sound so easy. I just, I wish I wasn't so scared. What were you doing in the middle of the street, a kid your age. Doc? Wrecked?</p>
+            </div>
+            <div class="action">
+              <a class="button" ui-sref="product({ id: product.guid})"> Read More</a>
+            </div>
+          </div>
+          </div>
+      </div>
